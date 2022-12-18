@@ -1,0 +1,11 @@
+참조변수의 형변환
+- 사용할 수 있는 멤버의 갯수를 조절하는 것
+- 조상 자손 관계의 참조변수는 서로 형변환 가능
+- 형 변환시 실제 객체가 무엇인지가 중요함
+       —> 실제 객체보다 참조변수의 멤버가 더 많다면 에러가 발생할 수 있어서 위험
+
+	FireEngine f = new Fire Engine();
+
+	Car c = (Car)f;				// OK. 조상인 Car타입으로 형변환(생략가능)
+	FireEngine f2 = (FireEngine)c;	// OK. 자손인 FireEngine타입으로 형변환(생략불가)
+	Ambulance a = (Ambulance)f;	// 에러. 상속관계가 아닌 클래스 간의 형변환 불가
