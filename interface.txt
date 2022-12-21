@@ -1,0 +1,47 @@
+인터페이스(interface)
+- 추상 메서드의 집합
+- 구현된 것이 전혀 없는 설계도. 껍데기(모든 멤버가 public)
+
+인터페이스와 추상클래스의 차이
+추상클래스 - 일반클래스(생성자, iv)가 추상메서드를 갖고 있는것
+인터페이스 - 추상 메서드(부수적으로 static메서드, 상수 디폴트 메서드)만 가지고 있다.
+￼
+- 변수(iv, cv)를 가질 수 없다.
+
+Interface PlayingCard {
+	public static final int SPADE = 4;
+	final int DIAMOND = 3;		// public static final int DIAMOND
+	static int HEART = 2;		// public static final int HEART
+	int CLOVER= 1;			// public static final int CLOVER
+// 항상 예외없이 public static final은 생략 가능
+
+	public abstract String getCardNumber();
+	String getCardKind();	//  public abstract String getCardKind();
+// public abstract 생략 가능
+
+인터페이스의 상속
+- 인터페이스의 조상은 인터페이스만 가능(Object가 최고 조상 아님)
+- 다중 상속이 가능(java는 충돌문제 때문에 단일 상속, 하지만 추상메서드는 충돌해도 문제 없음)
+
+인터페이스의 구현
+- 인터페이스에 정의된 추상 메서드를 완성하는 것
+- 일부만 구현하는 경우, 클래스 앞에 abstract를 붙여야 함
+
+Q. 인터페이스란?
+A. 추상 메서드의 집합
+
+Q. 인터페이스의 구현이란?
+A. 인터페이스의 추상메서드 몸통{} 만들기(미완성 설계도 완성하기)
+
+Q. 추상 클래스와 인터페이스와 공통점은?
+A. 추상 메서드를 가지고 있다.(미완성 설계도)
+
+Q. 추상 클래스와 인터페이스의 차이점은?
+A. 인터페이스는 iv를 가질 수 없다.
+
+인터페이스를 이용한 다형성
+- 인터페이스도 구현 클래스의 부모
+- 인터페이스 타입 매개변수는 인터페이스 구현한 클래스의 객체만 가능
+- 인터페이스를 메서드의 리턴 타입으로 지정할 수 있다.
+- 메소드의 반환 타입이 인터페이스 타입일 때는 인터페이스를 구현한 클래스의 객체를 반환
+- 메소드를 호출한 쪽도 같은 인터페이스 타입으로 받아줘야 함
