@@ -22,3 +22,11 @@ public class ExceptionEx7 {
 	}
 
 }
+
+결과
+1
+2
+3
+true
+ArithmeticException
+6
