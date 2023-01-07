@@ -1,0 +1,26 @@
+Object클래스
+- 모든 클래스의 최고 조상. 오직 11개의 메서드만을 가지고 있다.(iv, cv 없음)
+- notify(), wait() 등은 쓰레드와 관련된 메서드이다.
+
+Class {}
+- C가 대문자
+- 클래스 정보를 담기 위한 클래스(설계도)
+Hello.java —> Hello.class —> class파일이 메모리에 올라갈 때 Hello라는 클래스의 Class 객체가 자동으로 만들어진다.
+1. 이 설계도를 통해 객체 생성 가능
+2. 객체에 대한 정보를 얻을 수 있다.
+(참고)설계도를 가지고 객체 생성을 하고 객체 정보를 얻을 수 있게 해놓은 것을 Reflection API라고 한다.
+
+protected로 돼 있는 것들은 오버라이딩 해야한다.(public으로 변경, 내용도)
+
+equals(Object obj)
+- 객체 자신(this)과 주어진 객체(obj)를 비교한다. 같으면 true, 다르면 false.
+- Object클래스의 equals()는 객체의 주소를 비교(참조변수 값 비교)
+
+equals(Object obj)의 오버라이딩
+- 인스턴스 변수(iv)의 값을 비교하도록 equals()를 오버라이딩해야 한다.
+cv : 객체마다 공통(공유)
+iv : 객체마다 다름(개별)
+
+(참고) ch9.EqualsEx1.java, EqualsEx2.java
+
+Objects클래스는 객체와 관련된 유용한 메서드를 제공하는 유틸 클래스
