@@ -1,0 +1,19 @@
+hashCode()
+- 객체의 해시코드(hash code)를 반환하는 메서드
+- Object클래스의 hashCode()는 객체의 주소를 int로 변환해서 반환
+
+public class Object {
+	…
+public native int hashCode();
+	native메서드 : OS의 메서드(C언어)
+
+- equals()를 오버라이딩하면, hashCode()도 오버라이딩해야 한다.(iv를 가지고 작업을 하도록 오버라이딩)
+equals()의 결과가 true인 두 객체의 해시코드는 같아야 하기 때문(중요)
+- System.identityHashCode(Object obj)는 Object클래스의 hashCode()와 동일
+identityHashCode()는 객체마다 다른 해시코드 반환
+￼
+
+toString(), toString()의 오버라이딩
+- toString() : 객체를 문자열(String)으로 변환하기 위한 메서드
+
+※iv값을 출력을 하는 이유 : 객체 == iv집합이므로 객체를 문자열로 변환한다는 것은 iv의 값을 문자열로 변환한다는 것과 같다.※
